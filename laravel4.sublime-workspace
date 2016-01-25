@@ -1,0 +1,286 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"php",
+				"phpinfo"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/Http/Controllers/PostController.php",
+			"settings":
+			{
+				"buffer_size": 2670,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 390.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 646.0
+	},
+	"console":
+	{
+		"height": 174.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/victor/Dropbox/www/laravel/laravel4/vendor/fzaninotto/faker/readme.md",
+		"/Users/victor/Dropbox/www/laravel/laravel4/database/factories/ModelFactory.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/database/seeds/DatabaseSeeder.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Role.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/User.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/database/migrations/2016_01_21_162140_create_roles_table.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Post.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Comment.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/database/migrations/2016_01_21_153325_create_comments_table.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/database/migrations/2016_01_21_153317_create_posts_table.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Phone.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/database/migrations/2016_01_21_150407_create_phones_table.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/config/database.php",
+		"/Users/victor/Dropbox/www/laravel/restfull-api/config/database.php",
+		"/Users/victor/Dropbox/www/laravel/restfull-api/database/seeds/DatabaseSeeder.php",
+		"/Users/victor/Dropbox/www/laravel/restfull-api/database/seeds/OauthClientSeed.php",
+		"/Users/victor/Dropbox/www/laravel/restfull-api/database/seeds/MakerSeed.php",
+		"/Users/victor/Dropbox/www/laravel/restfull-api/database/seeds/VehiclesSeed.php",
+		"/Users/victor/Dropbox/www/laravel/restfull-api/database/seeds/UsersSeed.php",
+		"/Users/victor/Dropbox/www/laravel/restfull-api/app/Maker.php",
+		"/Users/victor/Dropbox/www/laravel/restfull-api/app/Vehicle.php",
+		"/Users/victor/Dropbox/www/laravel/restfull-api2/app/Repositories/PostRepository.php",
+		"/Users/victor/Dropbox/setup/tinker",
+		"/Users/victor/Dropbox/www/laravel/laravelx1/app/Http/routes.php",
+		"/Users/victor/Dropbox/www/laravel/laravelx1/app/User.php",
+		"/Users/victor/Dropbox/www/laravel/laravelx1/resources/views/partials/users.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravelx1/public/.htaccess",
+		"/Users/victor/Dropbox/www/laravel/laravel1/public/.htaccess",
+		"/Users/victor/Dropbox/www/laravel/laravel52/app/User.php",
+		"/Users/victor/Dropbox/www/laravel/laravel52/app/Http/routes.php",
+		"/Users/victor/Dropbox/www/laravel/dev/app/Providers/RouteServiceProvider.php",
+		"/Users/victor/Dropbox/www/laravel/laravel52/app/Http/Controllers/Auth/AuthController.php",
+		"/Users/victor/Dropbox/www/laravel/laravel52/resources/views/auth/register.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel52/config/mail.php",
+		"/Users/victor/Dropbox/www/laravel/laravel52/.env",
+		"/Users/victor/Dropbox/www/laravel/laravel52/storage/logs/laravel.log",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/HomeController.php",
+		"/Users/victor/Dropbox/www/laravel/tst52/app/Http/Controllers/HomeController.php",
+		"/home/victor92/Dropbox/diverse/setup/laravel",
+		"/tmp/fz3temp-1/.env",
+		"/tmp/fz3temp-1/.env.example",
+		"/tmp/fz3temp-1/index.php",
+		"/tmp/fz3temp-1/index 2.php",
+		"/home/victor92/Dropbox/www/laravel/laravel3/database/migrations/2015_11_04_173415_add_users.php",
+		"/home/victor92/Dropbox/www/laravel/laravel3/database/migrations/2015_11_04_190747_add_users.php",
+		"/home/victor92/Dropbox/www/laravel/laravel4/app/Http/routes.php",
+		"/home/victor92/Public/laravel/laravelx1/config/database.php",
+		"/home/victor92/Public/laravel/laravelx1/database/database.sqlite",
+		"/home/victor92/Public/laravel/laravelx1/.env",
+		"/home/victor92/Public/laravel/laravelx1/resources/views/welcome.blade.php",
+		"/home/victor92/Public/laravel/laravelx1/config/app.php",
+		"/home/victor92/Public/laravel/laravelx1/app/Providers/AppServiceProvider.php",
+		"/home/victor92/Dropbox/diverse/setup/setup_lamp",
+		"/home/victor92/Dropbox/diverse/setup/install-package-control",
+		"/home/victor92/Public/traian-kit4/application/config.ini",
+		"/home/victor92/Public/traian-kit4/config.php",
+		"/home/victor92/Public/traian-kit4/new-pdo/index.php",
+		"/home/victor92/Public/testgit/index.php",
+		"/home/victor92/Public/c1/.htaccess",
+		"/home/victor92/Public/testgit/config.php",
+		"/home/victor92/Public/c1/application/config/config.php",
+		"/home/victor92/Public/c2/application/config/config.php",
+		"/home/victor92/Public/c2/.htaccess",
+		"/home/victor92/Public/mvc/simple_mvc/.htaccess",
+		"/home/victor92/Public/traian-kit4/new-pdo/.htaccess",
+		"/home/victor92/Public/traian-kit4/view/header.php",
+		"/home/victor92/Public/codeigniter1/application/config/database.php",
+		"/home/victor92/Public/c1/application/controllers/example2.php",
+		"/home/victor92/Dropbox/www1/traian3/controller/Users_C.php",
+		"/home/victor92/Dropbox/diverse/setup/setup_dev_ruby_and Rails",
+		"/home/victor92/Dropbox/ruby/pinterest/Gemfile",
+		"/home/victor92/Public/wordpress/wp-content/themes/twentyfourteen/functions.php",
+		"/home/victor92/Public/wordpress/wp-content/themes/twentytwelve/functions.php",
+		"/home/victor92/Public/wordpress/wp-content/themes/twentytwelve/page-templates/front-page.php",
+		"/home/victor92/Public/wordpress/wp-content/themes/twentytwelve/page-templates/full-width.php",
+		"/home/victor92/Public/wordpress/wp-content/themes/twentytwelve/404.php",
+		"/home/victor92/Public/wordpress/wp-content/themes/twentytwelve/archive.php",
+		"/home/victor92/Public/wordpress/wp-content/themes/twentytwelve/author.php",
+		"/home/victor92/Public/wordpress/wp-content/themes/twentytwelve/category.php",
+		"/home/victor92/Public/wordpress/wp-includes/functions.php",
+		"/home/victor92/Public/wordpress/wp-admin/admin-functions.php",
+		"/home/victor92/Dropbox/diverse/setup_lamp",
+		"/home/victor92/Dropbox/diverse/setup_dev_ruby_and Rails",
+		"/home/victor92/Dropbox/diverse/setup_dev_python_django",
+		"/home/victor92/Public/wordpress/wp-config.php",
+		"/home/victor92/Public/wordpress/wp-settings.php",
+		"/home/victor92/Public/wordpress/wp-admin/install.php",
+		"/home/victor92/Public/wordpress/index.php",
+		"/home/victor92/Public/wordpress/wp-links-opml.php",
+		"/home/victor92/Public/wordpress/wp-login.php",
+		"/etc/wordpress/config-127.0.0.1.php",
+		"/etc/wordpress/htaccess",
+		"/var/www/testgit/index.php",
+		"/var/www/testgit/config.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"name",
+			"();",
+			"?>"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"username"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/Http/Controllers/PostController.php",
+					"settings":
+					{
+						"buffer_size": 2670,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 751.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"faker",
+				"vendor/fzaninotto/faker/readme.md"
+			],
+			[
+				"routeservi",
+				"dev/app/Providers/RouteServiceProvider.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/victor/OneDrive/Angular/angular-jump/angular-jump.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 206.0,
+	"status_bar_visible": true
+}
