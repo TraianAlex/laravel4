@@ -4,12 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Requests\CreateCommentRequest;
 use App\Http\Controllers\Controller;
-use App\Comment;
-use App\Post;
+use App\Role;
 
-class CommentController extends Controller
+class RoleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,7 +26,7 @@ class CommentController extends Controller
      */
     public function create()
     {
-        //return view('comments.create');
+        //
     }
 
     /**
@@ -37,14 +35,9 @@ class CommentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateCommentRequest $request)
+    public function store(Request $request)
     {
-        $post = Post::find($request->post_id);
-        //$comment = new Comment(['comment' => $request->comment]);
-        //$post->comments()->save($comment);
-        $comment = $post->comments()->create(['comment' => $request->comment,
-                                              'user_id' => auth()->user()->id]);
-        return redirect("posts/$request->post_id");
+        //
     }
 
     /**
@@ -53,9 +46,10 @@ class CommentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Role $role)
     {
-        //
+        $users = $role->users()->get();
+        return view('users.roles', compact('users'));
     }
 
     /**

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Requests\CreatePostRequest;
+use App\Http\Requests\UpdatePostRequest;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Post;
@@ -26,18 +27,21 @@ class PostController extends Controller
 
         //get one to many
         $post = Post::find(11);
-        $comments = $post->comments()->get();
-        //$comments->posts()->where('active', 1)->get();
+        if($post)
+            $comments = $post->comments()->get();
+            //$comments->posts()->where('active', 1)->get();
         //$comments = Post::find(11)->comments()->where('title', 'foo')->first();
 
         //inverse
         $comment = Comment::find(1);
-        $post_found = $comment->post->title;
+        if($comment)
+            $post_found = $comment->post->title;
 
         //many to many
-        $user = User::find(11);
-        $roles = $user->roles;
-        $roles2 = User::find(11)->roles()->orderBy('role')->get();
+        $user = User::find(32);
+        if($user)
+            $roles = $user->roles;
+        //$roles2 = User::find(11)->roles()->orderBy('role')->get();
 
         //Has Many Through
         $country = Country::find(1);
@@ -132,10 +136,15 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Post $post)
     {
-        $post = Post::findOrFail($id);
-        return view('posts.show', compact('post'));
+        //$post = Post::findOrFail($id);
+        $comments = $post->comments()->get();
+
+        //$user = User::find($post->user_id);//find comments by user
+        //$post_by_user = $user->comments;//replaced with post->user->comments
+
+        return view('posts.show', compact('post', 'comments'));
     }
 
     /**
@@ -144,9 +153,9 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Post $post)
     {
-        //
+        return view('posts.edit', compact('post'));
     }
 
     /**
@@ -156,9 +165,10 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdatePostRequest $request, Post $post)
     {
-        //
+        $post->update($request->all());
+        return redirect('posts/'.$post->id);
     }
 
     /**

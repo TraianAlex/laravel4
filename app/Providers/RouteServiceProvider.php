@@ -24,9 +24,22 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot(Router $router)
     {
-        //
-
         parent::boot($router);
+
+        $router->bind('posts', function($id)
+        {
+            return \App\Post::published()->findOrFail($id);
+        });
+
+        $router->bind('users', function($id)
+        {
+            return \App\User::findOrFail($id);
+        });
+
+        $router->bind('roles', function($name)
+        {
+            return \App\Role::where('role', $name)->firstOrFail();
+        });
     }
 
     /**

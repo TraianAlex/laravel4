@@ -1,46 +1,22 @@
 @extends('layouts.main')
 @section('content')
 <div class="content">
-    <div class="title">{{$post->title}}</div>
-    {{$post->body}}<br>
+    <h4>{{$post->title}}</h4> by: {{$post->user->name}}
+    <a href="{{url('posts/'.$post->id.'/edit')}}">edit</a>
+    <a href="#">delete</a>
+    <br>
+    {{$post->body}}<br><br>
 
-    <div class="container-fluid">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				<div class="panel panel-default">
-					<div class="panel-heading">Comment</div>
-					<div class="panel-body">
-						@if (count($errors) > 0)
-							<div class="alert alert-danger">
-								<strong>Whoops!</strong> There were some problems with your input.<br><br>
-								<ul>
-									@foreach ($errors->all() as $error)
-										<li>{{ $error }}</li>
-									@endforeach
-								</ul>
-							</div>
-						@endif
+    @foreach ($comments as $comment)
+    	@if($comment->user)
+    		{{$comment->id}}. <b>{{$comment->user->name}}:</b> {{$comment->created_at}}<br>
+    	@endif
+    	{{$comment->comment}}<br>
+    @endforeach
+    <br>
+	<b>Comments by: {{$post->user->name}}</b>{{$post->user->comments}}<br>
+	<br>
 
-						<form class="form-horizontal" role="form" method="POST" action="{{ url('/comments') }}">
-							<input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-							<div class="form-group">
-								<label class="col-md-4 control-label">Comment</label>
-								<div class="col-md-6">
-									<textarea type="text" class="form-control" name="comment"></textarea>
-								</div>
-							</div>
-
-							<div class="form-group">
-								<div class="col-md-6 col-md-offset-4">
-									<button type="submit" class="btn btn-primary">Create Comment</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    @include('comments.create')
 </div>
 @endsection

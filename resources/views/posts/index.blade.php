@@ -2,78 +2,113 @@
 @section('content')
 <div class="content">
 	<a href="{{route('posts.create')}}" type="button" class="btn btn-primary">Create a post</a>
+	
 	<h4>Posts</h4>
 	@foreach ($post_all as $post)
-		<b>{{$post->title}}</b> by {{$post->user->name}}<br>
+		<b><a href="{{url('/posts', $post->id)}}">{{$post->title}}</a></b> by {{$post->user->name}}<br>
 		{{$post->body}}<br>
 		<a href="{{url('/posts', $post->id)}}">comment</a><hr>
 	@endforeach
 	{!!$post_all->render()!!}
 	<hr>
 
-    <h4>Post get his comments -- one to many</h4>
+<!-------------------------------------------------------------------------------------->
 
-	{{$post->title}}<br>
-	{{$post->body}}<br>
-    @foreach ($comments as $comment)
-    	<h4>Comment</h4>
-    	{{$comment->comment}}
-    	<hr>
-	@endforeach
+    @if($post)
+    	<h4>Post get his comments -- one to many</h4>
+		{{$post->title}}<br>
+		{{$post->body}}<br>
+		@if(isset($comments))
+		    @foreach ($comments as $comment)
+		    	<h4>Comment</h4>
+		    	{{$comment->comment}}
+		    	<hr>
+			@endforeach
+		@endif
+	@endif
 
-	@foreach ($user->posts as $post)
-    	{{$post}}<br>
-	@endforeach
+<!-------------------------------------------------------------------------------------->
 
-	<h4>Comment nr ### found his post -- many to one</h4>
+	@if($user)
+		@foreach ($user->posts as $post)
+	    	{{$post}}<br>
+		@endforeach
+	@endif
 
-	{{$post_found}}
-	<hr>
+<!-------------------------------------------------------------------------------------->
+
+	@if(isset($post_found))
+		<h4>Comment nr ### found his post -- many to one</h4>
+		{{$post_found}}
+		<hr>
+	@endif
+
+<!-------------------------------------------------------------------------------------->
 
 	<h4>Many to many</h4>
 
-	@foreach ($user->roles as $role)
-		<b>Name:</b> {{$user->name}}<br>
-		<b>Role:</b> {{$role->role}}<br>
-		<b>Created at: </b>{{$role->pivot->created_at}}<br>
-	@endforeach
-
-	<hr>
-	@foreach($roles as $role)
-		{{$role->role}} | 
-	@endforeach
-
-	<hr>
-	@foreach($roles2 as $role)
-		{{$role->role}} | 
-	@endforeach
+	@if($user)
+		@foreach ($user->roles as $role)
+			<b>Name:</b> {{$user->name}}<br>
+			<b>Role:</b> {{$role->role}}<br>
+			<b>Created at: </b>{{$role->pivot->created_at}}<br>
+		@endforeach
+	@endif
 	<hr>
 
-	<h4>Has Many Through</h4>
+	@if(isset($roles))
+		@foreach($roles as $role)
+			{{$role->role}} | 
+		@endforeach
+		<hr>
+	@endif
 
-	<h5>Post by {{$country->name}}</h5>
-	@foreach($post_by_country as $post)
-		{{$post->title}}
-	@endforeach
-	<hr>
+	@if(isset($roles2))
+		@foreach($roles2 as $role)
+			{{$role->role}} | 
+		@endforeach
+		<hr>
+	@endif
 
-	<h4>Polymorphic</h4>
+<!-------------------------------------------------------------------------------------->
 
-	@foreach ($post->likes as $like)
-		<b>Likes:</b> {{$like}}
-	@endforeach
-    <hr>
+	@if($post)
+		<h4>Has Many Through</h4>
+
+		<h5>Post by {{$country->name}}</h5>
+		@foreach($post_by_country as $post)
+			{{$post->title}}
+		@endforeach
+		<hr>
+
+<!-------------------------------------------------------------------------------------->
+
+		<h4>Polymorphic</h4>
+
+		@foreach ($post->likes as $like)
+			<b>Likes:</b> {{$like}}
+		@endforeach
+		<hr>
+	@endif
+
+<!-------------------------------------------------------------------------------------->
 
     <h4>Owner of polymorphic</h4>
 
     {{$likeable}}
     <hr>
 
-    <h4>Many To Many Polymorphic</h4>
-    @foreach ($post->tags as $tag)
-    	<b>Tags:</b> {{$tag}}
-    @endforeach
-    <hr>
+<!-------------------------------------------------------------------------------------->
+
+	@if($post)
+	    <h4>Many To Many Polymorphic</h4>
+	    @foreach ($post->tags as $tag)
+	    	<b>Tags:</b> {{$tag}}
+	    @endforeach    
+    	<hr>
+	@endif
+
+<!-------------------------------------------------------------------------------------->
 
     <h4>Owner of Many To Many Polymorphic</h4>
 
@@ -82,10 +117,13 @@
 	@endforeach
     <hr>
 
+<!-------------------------------------------------------------------------------------->
+
     <h4>Eager loading</h4>
 
     @foreach ($post2 as $post)
     	{{$post->user->name}}<br>
+    	{{$post->title}}<br>
     @endforeach
     <hr>
 </div>

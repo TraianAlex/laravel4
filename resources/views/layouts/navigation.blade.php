@@ -14,7 +14,7 @@
 	<div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav">
 			<li class="active"><a href="{{route('posts.index')}}">Posts</a></li>
-			<li><a href="#">Link</a></li>
+			<li><a href="{{url('users')}}">Users</a></li>
 		</ul>
 		<form class="navbar-form navbar-left" role="search">
 			<div class="form-group">
@@ -24,6 +24,7 @@
 		</form>
 		<ul class="nav navbar-nav navbar-right">
 			@if(Auth::check())
+				<li><a href="{{url('users/'.auth()->user()->id)}}">{{auth()->user()->email}}</a></li>
 				<li><a href="{{ url('/auth/logout') }}">Sign out</a></li>
 			@else
 				<li><a href="{{ url('/auth/login') }}">Sign in</a></li>

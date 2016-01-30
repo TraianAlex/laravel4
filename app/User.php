@@ -28,7 +28,7 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = ['name', 'email', 'password', 'country_id'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -65,5 +65,26 @@ class User extends Model implements AuthenticatableContract,
     public function posts()
     {
         return $this->hasMany('App\Post');
+    }
+    /**
+     * find comments by user
+     */
+    public function comments()
+    {
+        return $this->hasManyThrough('App\Comment', 'App\Post');
+    }
+
+    /**
+     * Get a list of role ids associated with the current user
+     * @return array
+     */
+    public function getRoleListAttribute()
+    {
+        return $this->roles->lists('id')->all();//->all() resolved the problem in form
+    }
+
+    public function country()
+    {
+        return $this->belongsTo('App\Country');
     }
 }

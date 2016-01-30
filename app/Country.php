@@ -17,4 +17,9 @@ class Country extends Model
     {
         return $this->hasManyThrough('App\Post', 'App\User');
     }
+
+    // public function users()
+    // {
+    // 	return $this->hasMany('App\User');
+    // }
 }

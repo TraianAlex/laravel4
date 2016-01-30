@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"has",
+				"hasMany〔function〕"
+			],
+			[
+				"end",
+				"endif"
+			],
+			[
+				"bs3-l",
+				"bs3-link-button:success	bs3-link-button-success"
+			],
+			[
+				"bs3-li",
+				"bs3-link-button:danger	bs3-link-button-danger"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"post_by",
+				"post_by_user"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"butt",
+				"bs3-button:primary	bs3-button-primary"
+			],
+			[
+				"bs3-fo",
+				"bs3-form:inline	bs3-form-inline"
+			],
+			[
 				"php",
 				"phpinfo"
 			]
@@ -15,7 +51,63 @@
 			"file": "app/Http/Controllers/PostController.php",
 			"settings":
 			{
-				"buffer_size": 2670,
+				"buffer_size": 5897,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/users/edit.blade.php",
+			"settings":
+			{
+				"buffer_size": 1233,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/UserController.php",
+			"settings":
+			{
+				"buffer_size": 3061,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/User.php",
+			"settings":
+			{
+				"buffer_size": 2883,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Country.php",
+			"settings":
+			{
+				"buffer_size": 649,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/users/show.blade.php",
+			"settings":
+			{
+				"buffer_size": 1448,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Phone.php",
+			"settings":
+			{
+				"buffer_size": 254,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/posts/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 3004,
 				"line_ending": "Unix"
 			}
 		}
@@ -48,14 +140,49 @@
 	},
 	"file_history":
 	[
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/users/index.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Providers/RouteServiceProvider.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/show.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/index.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/create.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/layouts/navigation.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/UserController.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/users/edit.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/users/show.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/helpers.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/composer.json",
+		"/Users/victor/Dropbox/www/laravel/laravel4/database/migrations/2016_01_29_165055_alter_user_id_to_posts_table",
+		"/Users/victor/Dropbox/www/laravel/laravel4/database/migrations/2016_01_21_225345_add_user_id_to_posts_table.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/database/migrations/2016_01_25_165054_add_user_id_to_comments_table.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Requests/UpdateUserRequest.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Role.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/RoleController.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/users/roles.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/User.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/routes.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/errors/list.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/users/create.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/PostController.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/Auth/AuthController.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/vendor/laravel/framework/src/Illuminate/Routing/Redirector.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/CommentController.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Post.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Comment.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/public/.htaccess",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Requests/CreateCommentRequest.php",
+		"/Users/victor/Dropbox/setup/git",
+		"/Users/victor/Dropbox/www/laravel/laravel4/.gitignore",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Requests/CreatePostRequest.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/comments/create.blade.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/vendor/fzaninotto/faker/readme.md",
 		"/Users/victor/Dropbox/www/laravel/laravel4/database/factories/ModelFactory.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/database/seeds/DatabaseSeeder.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Role.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/User.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/database/migrations/2016_01_21_162140_create_roles_table.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Post.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Comment.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/database/migrations/2016_01_21_153325_create_comments_table.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/database/migrations/2016_01_21_153317_create_posts_table.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Phone.php",
@@ -140,8 +267,7 @@
 		"/home/victor92/Public/wordpress/wp-login.php",
 		"/etc/wordpress/config-127.0.0.1.php",
 		"/etc/wordpress/htaccess",
-		"/var/www/testgit/index.php",
-		"/var/www/testgit/config.php"
+		"/var/www/testgit/index.php"
 	],
 	"find":
 	{
@@ -159,6 +285,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$post",
+			"intended",
+			"sendLockoutResponse",
+			"attempt",
+			"authenticated",
+			"post",
 			"name",
 			"();",
 			"?>"
@@ -180,6 +312,7 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -187,25 +320,220 @@
 					"file": "app/Http/Controllers/PostController.php",
 					"settings":
 					{
-						"buffer_size": 2670,
+						"buffer_size": 5897,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								955,
+								955
 							]
 						],
 						"settings":
 						{
+							"auto_complete": false,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 751.0,
+						"translation.y": 1312.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "resources/views/users/edit.blade.php",
+					"settings":
+					{
+						"buffer_size": 1233,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								813,
+								813
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 12.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/Http/Controllers/UserController.php",
+					"settings":
+					{
+						"buffer_size": 3061,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2084,
+								2084
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1443.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/User.php",
+					"settings":
+					{
+						"buffer_size": 2883,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2881,
+								2881
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1266.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/Country.php",
+					"settings":
+					{
+						"buffer_size": 649,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								567,
+								567
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "resources/views/users/show.blade.php",
+					"settings":
+					{
+						"buffer_size": 1448,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								594,
+								594
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/Phone.php",
+					"settings":
+					{
+						"buffer_size": 254,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								254,
+								254
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "resources/views/posts/index.blade.php",
+					"settings":
+					{
+						"buffer_size": 3004,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1475,
+								1475
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 799.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -277,7 +605,7 @@
 		],
 		"width": 380.0
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
