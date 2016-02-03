@@ -1,26 +1,35 @@
 @extends('layouts.main')
 @section('content')
 <div class="content">
-    <div class="title">Laravel 5</div>
-    <h3>User:</h3>
-    {{$user->name}} <a class="btn btn-disabled" href="{{url('users/'.$user->id.'/edit')}}" role="button">Edit</a>{!!delete_form(['users.destroy', $user->id])!!}
-    <br>
-    {{$user->email}}<br>
-    @if($user->country)
-    	<b>Country: </b>{{$user->country->name}}<br>
-    @endif
-    @if($user->phone)
-    	<b>Phone: </b>{{$user->phone->name}}
-    @endif
+	<div class="row">
+    	<b>{{$user->name}}</b>
+	    <br>
+	    <b>Email: </b>{{$user->email}}<br>
+	    @if($user->country)
+	    	<b>Country: </b>{{$user->country->name}}
+	    @endif
+	    <br>
+	    @if($user->phone)
+	    	<b>Phone: </b>{{$user->phone->name}}
+	    @endif
+	    <br>
 
 <!------------------------------------------------------------------------------------------>
 
-    <h4>Roles:</h4>
-    @foreach ($user->roles as $role)
-		<a href="{{url('roles/'.$role->role)}}">{{$role->role}}</a>
-		<b>Created at: </b>{{$role->pivot->created_at}}
-		<b>Updated at: </b>{{$role->pivot->updated_at}}<br>
-	@endforeach
+	    <b>Roles:</b>
+	    @foreach ($user->roles as $role)
+			<a href="{{url('roles/'.$role->role)}}">{{$role->role}}</a><br>
+			<b>Created at: </b>{{$role->pivot->created_at}}<br>
+			<b>Updated at: </b>{{$role->pivot->updated_at}}<br>
+		@endforeach
+		</div>
+		<div class="col-md-1">
+	    	<a class="btn btn-disabled" href="{{url('users/'.$user->id.'/edit')}}" role="button">Edit</a>
+	    </div>
+	    <div class="col-md-2">
+	    	{!!delete_form(['users.destroy', $user->id])!!}
+	    </div>
+	    <br>
 	<hr>
 
 <!------------------------------------------------------------------------------------------>

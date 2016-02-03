@@ -95,13 +95,16 @@
 
     <h4>Owner of polymorphic</h4>
 
-    {{$likeable}}
+    @if(isset($likeable))
+    	{{$likeable}}
+    @endif	
     <hr>
 
 <!-------------------------------------------------------------------------------------->
 
 	@if($post)
 	    <h4>Many To Many Polymorphic</h4>
+	    
 	    @foreach ($post->tags as $tag)
 	    	<b>Tags:</b> {{$tag}}
 	    @endforeach    

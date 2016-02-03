@@ -98,6 +98,7 @@ class UserController extends Controller
     {
         //$fallenOne = User::find($id);
         //$fallenOne = $user->find($user->id);
+        $user->likes()->delete();
         $user->roles()->detach();
         $user->phone()->delete();
         

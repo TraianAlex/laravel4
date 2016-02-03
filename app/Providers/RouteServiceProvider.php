@@ -40,6 +40,16 @@ class RouteServiceProvider extends ServiceProvider
         {
             return \App\Role::where('role', $name)->firstOrFail();
         });
+
+        $router->bind('comments', function($id)
+        {
+            return \App\Comment::findOrFail($id);
+        });
+
+        $router->bind('tags', function($name)
+        {
+            return \App\Tag::where('name', $name)->firstOrFail();
+        });
     }
 
     /**

@@ -34,7 +34,7 @@ class Post extends Model
      */
     public function tags()
     {
-        return $this->morphToMany('App\Tag', 'taggable');
+        return $this->morphToMany('App\Tag', 'taggable')->withTimestamps();
     }
     /**
      * Eager loading
@@ -47,5 +47,14 @@ class Post extends Model
     public function scopePublished($query)
     {
         $query->where('created_at', '<=', Carbon::now());
+    }
+
+    /**
+     * Get a list of tags ids already associated with the current post
+     * @return array
+     */
+    public function getTagListAttribute()
+    {
+        return $this->tags->lists('id')->all();//->all() resolved the problem in form
     }
 }

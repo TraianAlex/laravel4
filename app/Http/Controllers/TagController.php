@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Role;
+use App\Tag;
 
-class RoleController extends Controller
+class TagController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -46,10 +46,10 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Role $role)
+    public function show(Tag $tag)
     {
-        $users = $role->users()->get();
-        return view('users.roles', compact('users'));
+        $posts = $tag->posts()->get();//=$tag->posts()->published()->get() ??
+        return view('posts.tags', compact('posts'));
     }
 
     /**

@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Role;
+use App\Post;
+use App\Comment;
 
-class RoleController extends Controller
+class LikeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,16 +20,35 @@ class RoleController extends Controller
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function getLike($postId)
     {
-        //
+        $post = Post::find($postId);
+
+        if(!$post) return redirect()->route('posts.index');
+        if(auth()->user()->hasLikedPost($post)){
+            $post->likes()->delete();//make toggable
+            return redirect()->back();
+        } 
+        
+        $like = $post->likes()->create([]);
+        auth()->user()->likes()->save($like);
+        return redirect()->back();
     }
 
+    public function getLikeComment($commentId)
+    {
+        $comment = Comment::find($commentId);
+
+        if(!$comment) return redirect()->route('posts.index');
+        if(auth()->user()->hasLikedComment($comment)){
+            $comment->likes()->delete();
+            return redirect()->back();
+        } 
+        
+        $like = $comment->likes()->create([]);
+        auth()->user()->likes()->save($like);
+        return redirect()->back();
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -46,10 +66,9 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Role $role)
+    public function show($id)
     {
-        $users = $role->users()->get();
-        return view('users.roles', compact('users'));
+        //
     }
 
     /**

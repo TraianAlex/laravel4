@@ -36,6 +36,13 @@
 							</div>
 
 							<div class="form-group">
+								{!! Form::label('tag_list', 'Tags:', ['class' => "col-md-4 control-label"]) !!}
+								<div class="col-md-6">
+									{!! Form::select('tag_list[]', $tags, null, ['id' => 'tag_list', 'class' => 'form-control', 'multiple']) !!}
+								</div>
+							</div>
+
+							<div class="form-group">
 								<div class="col-md-6 col-md-offset-4">
 									<button type="submit" class="btn btn-primary">Create Post</button>
 								</div>

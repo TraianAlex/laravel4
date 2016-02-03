@@ -9,6 +9,8 @@ use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use App\Post;
+use App\Comment;
 
 class User extends Model implements AuthenticatableContract,
                                     AuthorizableContract,
@@ -86,5 +88,20 @@ class User extends Model implements AuthenticatableContract,
     public function country()
     {
         return $this->belongsTo('App\Country');
+    }
+
+    public function likes()
+    {
+        return $this->hasMany('App\Like', 'user_id');
+    }
+
+    public function hasLikedPost(Post $post)
+    {
+        return (bool) $post->likes->where('user_id', $this->id)->count();
+    }
+
+    public function hasLikedComment(Comment $comment)
+    {
+        return (bool) $comment->likes->where('user_id', $this->id)->count();
     }
 }

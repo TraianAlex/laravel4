@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddUserIdToPostsTable extends Migration
+class AddUserIdToLikesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,8 @@ class AddUserIdToPostsTable extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->integer('user_id')->default('11');//nullable
-            //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        Schema::table('likes', function (Blueprint $table) {
+            $table->integer('user_id')->nullable();
         });
     }
 
@@ -25,8 +24,7 @@ class AddUserIdToPostsTable extends Migration
      */
     public function down()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            //$table->dropForeign('posts_user_id_foreign');
+        Schema::table('likes', function (Blueprint $table) {
             $table->dropColumn('user_id');
         });
     }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Requests\CreateCommentRequest;
+use App\Http\Requests\UpdateCommentRequest;
 use App\Http\Controllers\Controller;
 use App\Comment;
 use App\Post;
@@ -64,9 +65,9 @@ class CommentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Comment $comment)
     {
-        //
+        return view('comments.edit', compact('comment'));
     }
 
     /**
@@ -76,9 +77,10 @@ class CommentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateCommentRequest $request, Comment $comment)
     {
-        //
+        $comment->update($request->all());
+        return redirect('posts/'.$comment->post_id);
     }
 
     /**
@@ -87,8 +89,10 @@ class CommentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Comment $comment)
     {
-        //
+        $comment->likes()->delete();
+        $comment->delete();
+        return redirect('posts/'.$comment->post_id);
     }
 }

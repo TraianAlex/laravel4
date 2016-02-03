@@ -47,9 +47,12 @@ class PostController extends Controller
         $country = Country::find(1);
         $post_by_country = $country->posts;
 
+        //Polymorphic
+        //foreach ($post->likes as $like) {}
         //inverse
         $like = Like::find(1);
-        $likeable = $like->likeable;
+        if($like)
+            $likeable = $like->likeable;
 
         //Many To Many Polymorphic
         //$post = App\Post::find(1);
@@ -115,7 +118,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        $tags = \App\Tag::lists('name', 'id');
+        return view('posts.create', compact('tags'));
     }
 
     /**
@@ -126,7 +130,8 @@ class PostController extends Controller
      */
     public function store(CreatePostRequest $request)
     {
-        auth()->user()->posts()->create($request->all());
+        $post = auth()->user()->posts()->create($request->all());
+        $post->tags()->sync(!$request->input('tag_list') ? [] : $request->input('tag_list'));
         return redirect('posts');
     }
 
@@ -138,6 +143,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
+        auth()->loginUsingId(33);
         //$post = Post::findOrFail($id);
         $comments = $post->comments()->get();
 
@@ -155,7 +161,8 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('posts.edit', compact('post'));
+        $tags = \App\Tag::lists('name', 'id');
+        return view('posts.edit', compact('post', 'tags'));
     }
 
     /**
@@ -168,6 +175,7 @@ class PostController extends Controller
     public function update(UpdatePostRequest $request, Post $post)
     {
         $post->update($request->all());
+        $post->tags()->sync(!$request->input('tag_list') ? [] : $request->input('tag_list'));
         return redirect('posts/'.$post->id);
     }
 
@@ -177,8 +185,16 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Post $post)
     {
-        //
+        if($post->comments){
+            foreach($post->comments as $comment){
+                Comment::where('post_id', $comment->post_id)->firstOrFail()->likes()->delete();
+            }
+            $post->comments()->delete();
+        }
+        $post->likes()->delete();
+        $post->delete();
+        return redirect('posts');
     }
 }
