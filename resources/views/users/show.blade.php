@@ -23,12 +23,14 @@
 			<b>Updated at: </b>{{$role->pivot->updated_at}}<br>
 		@endforeach
 		</div>
-		<div class="col-md-1">
-	    	<a class="btn btn-disabled" href="{{url('users/'.$user->id.'/edit')}}" role="button">Edit</a>
-	    </div>
-	    <div class="col-md-2">
-	    	{!!delete_form(['users.destroy', $user->id])!!}
-	    </div>
+		@if($user->can('edit', $user))
+			<div class="col-md-1">
+		    	<a class="btn btn-disabled" href="{{url('users/'.$user->id.'/edit')}}" role="button">Edit</a>
+		    </div>
+		    <div class="col-md-2">
+		    	{!!delete_form(['users.destroy', $user->id])!!}
+		    </div>
+	    @endif
 	    <br>
 	<hr>
 

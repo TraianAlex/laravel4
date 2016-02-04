@@ -26,7 +26,7 @@ class LikeController extends Controller
 
         if(!$post) return redirect()->route('posts.index');
         if(auth()->user()->hasLikedPost($post)){
-            $post->likes()->delete();//make toggable
+            //auth()->user()->likes()->delete();
             return redirect()->back();
         } 
         
@@ -41,7 +41,7 @@ class LikeController extends Controller
 
         if(!$comment) return redirect()->route('posts.index');
         if(auth()->user()->hasLikedComment($comment)){
-            $comment->likes()->delete();
+            //auth()->user()->likes()->delete();
             return redirect()->back();
         } 
         

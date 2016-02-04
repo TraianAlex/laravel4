@@ -8,9 +8,14 @@ use App\Http\Controllers\Controller;
 use App\User;
 use App\Post;
 use App\Phone;
+use Gate;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -51,6 +56,9 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
+        if ($user->cannot('edit', $user)) return redirect('users');
+        //if(Gate::denies('edit', $user)) return redirect('users');//??
+
         $roles = \App\Role::lists('role', 'id');
         $countries = \App\Country::lists('name', 'id');
         return view('users.edit', compact('user', 'roles', 'countries'));
@@ -65,6 +73,9 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)//$id
     {
+        if ($user->cannot('edit', $user)) return redirect('users');
+        //if(auth()->user()->id != $user->id) return redirect('users');
+
         $this->validate($request, ['name' => 'required|max:30',
             'email' => 'required|max:60|email|unique:users,email,'.$user->id,
             'country_id' => 'integer|max:3',
@@ -96,8 +107,8 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //$fallenOne = User::find($id);
-        //$fallenOne = $user->find($user->id);
+       if ($user->cannot('edit', $user)) return redirect('users');
+
         $user->likes()->delete();
         $user->roles()->detach();
         $user->phone()->delete();

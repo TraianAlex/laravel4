@@ -51,22 +51,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/Http/Controllers/PostController.php",
-			"settings":
-			{
-				"buffer_size": 6279,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/posts/index.blade.php",
-			"settings":
-			{
-				"buffer_size": 3047,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -96,30 +80,38 @@
 	},
 	"file_history":
 	[
-		"/Users/victor/Dropbox/www/laravel/laravel4/database/migrations/2016_01_21_225345_add_user_id_to_posts_table.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/CommentController.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/routes.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/PostController.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Providers/AuthServiceProvider.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/UserController.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Policies/UserPolicy.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Policies/PostPolicy.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/show.blade.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/users/show.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/CommentController.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Policies/CommentPolicy.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/LikeController.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Post.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/tags.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/TagController.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Providers/RouteServiceProvider.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/routes.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/index.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/create.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/edit.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/users/edit.blade.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/comments/create.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/User.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Requests/CreateCommentRequest.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/helpers.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/database/migrations/2016_01_21_225345_add_user_id_to_posts_table.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/users/show.blade.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/comments/edit.blade.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Requests/UpdatePostRequest.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Requests/UpdateCommentRequest.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/RoleController.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/edit.blade.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/users/edit.blade.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/index.blade.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/UserController.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Country.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Phone.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/User.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/users/index.blade.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/create.blade.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/layouts/navigation.blade.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/helpers.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/composer.json",
 		"/Users/victor/Dropbox/www/laravel/laravel4/database/migrations/2016_01_29_165055_alter_user_id_to_posts_table",
 		"/Users/victor/Dropbox/www/laravel/laravel4/database/migrations/2016_01_25_165054_add_user_id_to_comments_table.php",
@@ -135,7 +127,6 @@
 		"/Users/victor/Dropbox/www/laravel/laravel4/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Post.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Comment.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/public/.htaccess",
 		"/Users/victor/Dropbox/setup/git",
@@ -216,14 +207,7 @@
 		"/home/victor92/Public/wordpress/wp-content/themes/twentytwelve/author.php",
 		"/home/victor92/Public/wordpress/wp-content/themes/twentytwelve/category.php",
 		"/home/victor92/Public/wordpress/wp-includes/functions.php",
-		"/home/victor92/Public/wordpress/wp-admin/admin-functions.php",
-		"/home/victor92/Dropbox/diverse/setup_lamp",
-		"/home/victor92/Dropbox/diverse/setup_dev_ruby_and Rails",
-		"/home/victor92/Dropbox/diverse/setup_dev_python_django",
-		"/home/victor92/Public/wordpress/wp-config.php",
-		"/home/victor92/Public/wordpress/wp-settings.php",
-		"/home/victor92/Public/wordpress/wp-admin/install.php",
-		"/home/victor92/Public/wordpress/index.php"
+		"/home/victor92/Public/wordpress/wp-admin/admin-functions.php"
 	],
 	"find":
 	{
@@ -241,6 +225,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"}",
 			"$post",
 			"intended",
 			"sendLockoutResponse",
@@ -268,65 +253,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/Http/Controllers/PostController.php",
-					"settings":
-					{
-						"buffer_size": 6279,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1261,
-								1261
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 256.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "resources/views/posts/index.blade.php",
-					"settings":
-					{
-						"buffer_size": 3047,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1656.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],

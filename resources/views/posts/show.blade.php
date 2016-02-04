@@ -8,13 +8,17 @@
         <div class="col-md-9">
             {{$post->body}}<br><br>
         </div>
-        <div class="col-md-1">
-            <a href="{{url('posts/'.$post->id.'/edit')}}">edit</a>
-        </div>
-        <div class="col-md-2">
-            {!!delete_form(['posts.destroy', $post->id])!!}
-        </div>
-       
+
+        @can('edit', $post)
+            <div class="col-md-1">
+                <a href="{{url('posts/'.$post->id.'/edit')}}">edit</a>
+            </div>
+
+            <div class="col-md-2">
+                {!!delete_form(['posts.destroy', $post->id])!!}
+            </div>
+        @endcan
+
          <a href="{{ url('likes/like', ['postId' => $post->id]) }}">Like</a>
         {{ $post->likes->count() }} {{ str_plural('like', $post->likes->count()) }}
         
@@ -31,12 +35,15 @@
             <div class="col-md-9">
         	   {{$comment->comment}}
             </div>
-            <div class="col-md-1">
-                <a href="{{url('comments/'.$comment->id.'/edit')}}">edit</a>
-            </div>
-            <div class="col-md-2">
-                {!!delete_form(['comments.destroy', $comment->id])!!}
-            </div>
+
+            @can('edit', $comment)
+                <div class="col-md-1">
+                    <a href="{{url('comments/'.$comment->id.'/edit')}}">edit</a>
+                </div>
+                <div class="col-md-2">
+                    {!!delete_form(['comments.destroy', $comment->id])!!}    
+                </div>
+            @endcan
             <br>
             <br>
         @endforeach

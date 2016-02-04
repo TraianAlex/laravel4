@@ -9,6 +9,7 @@ use App\Http\Requests\UpdateCommentRequest;
 use App\Http\Controllers\Controller;
 use App\Comment;
 use App\Post;
+use Gate;
 
 class CommentController extends Controller
 {
@@ -67,6 +68,7 @@ class CommentController extends Controller
      */
     public function edit(Comment $comment)
     {
+        if(Gate::denies('edit', $comment)) abort(403, 'Sorry, not sorry.');
         return view('comments.edit', compact('comment'));
     }
 
@@ -79,6 +81,7 @@ class CommentController extends Controller
      */
     public function update(UpdateCommentRequest $request, Comment $comment)
     {
+        if(Gate::denies('edit', $comment)) abort(403, 'Sorry, not sorry.');
         $comment->update($request->all());
         return redirect('posts/'.$comment->post_id);
     }
@@ -91,6 +94,7 @@ class CommentController extends Controller
      */
     public function destroy(Comment $comment)
     {
+        if(Gate::denies('edit', $comment)) abort(403, 'Sorry, not sorry.');
         $comment->likes()->delete();
         $comment->delete();
         return redirect('posts/'.$comment->post_id);

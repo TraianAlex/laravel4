@@ -13,9 +13,14 @@ use App\Comment;
 use App\Country;
 use App\Like;
 use App\Tag;
+use Gate;
 
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -143,7 +148,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        auth()->loginUsingId(33);
+        auth()->loginUsingId(34);//33/34
         //$post = Post::findOrFail($id);
         $comments = $post->comments()->get();
 
@@ -161,6 +166,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
+        if(Gate::denies('edit', $post)) abort(403, 'Sorry, not sorry.');
+        //if($this->authorize('edit', $post)) return redirect()->back();
+
         $tags = \App\Tag::lists('name', 'id');
         return view('posts.edit', compact('post', 'tags'));
     }
@@ -174,6 +182,8 @@ class PostController extends Controller
      */
     public function update(UpdatePostRequest $request, Post $post)
     {
+        if(Gate::denies('edit', $post)) abort(403, 'Sorry, not sorry.');
+
         $post->update($request->all());
         $post->tags()->sync(!$request->input('tag_list') ? [] : $request->input('tag_list'));
         return redirect('posts/'.$post->id);
@@ -187,6 +197,8 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
+        if(Gate::denies('edit', $post)) abort(403, 'Sorry, not sorry.');
+
         if($post->comments){
             foreach($post->comments as $comment){
                 Comment::where('post_id', $comment->post_id)->firstOrFail()->likes()->delete();
@@ -194,6 +206,7 @@ class PostController extends Controller
             $post->comments()->delete();
         }
         $post->likes()->delete();
+        $post->tags()->detach();
         $post->delete();
         return redirect('posts');
     }
