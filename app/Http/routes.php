@@ -3,6 +3,7 @@
 resource('posts', 'PostController');//method index
 resource('comments', 'CommentController', ['except' => ['index', 'create', 'show']]);
 resource('users', 'UserController', ['except' => ['create', 'store']]);
+//post('posts/{post}/comment', 'CommentController@store');
 //resource('roles', 'RoleController', ['only' => ['show']]);
 get('roles/{roles}', 'RoleController@show');
 get('tags/{tags}', 'TagController@show');

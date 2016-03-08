@@ -12,7 +12,7 @@ class Comment extends Model
 	 */
     public function post()
     {
-        return $this->belongsTo('App\Post');
+        return $this->belongsTo(Post::class);
     }
     /**
      * Polymorphic Relations
@@ -20,13 +20,13 @@ class Comment extends Model
      */
     public function likes()
     {
-        return $this->morphMany('App\Like', 'likeable');
+        return $this->morphMany(Like::class, 'likeable');
     }
     /**
      * display user for any comment in show
      */
     public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo(User::class);
     }
 }

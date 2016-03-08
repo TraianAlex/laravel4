@@ -148,7 +148,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        auth()->loginUsingId(34);//33/34
+        //auth()->loginUsingId(34);//33/34
         //$post = Post::findOrFail($id);
         $comments = $post->comments()->get();
 

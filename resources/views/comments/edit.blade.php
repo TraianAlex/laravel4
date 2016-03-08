@@ -20,7 +20,6 @@
 					@endif
 
 					{!! Form::model($comment, ['method' => 'PATCH', 'url' => url('comments/'.$comment->id), "class" => 'form-horizontal', "role" => 'form']) !!}
-						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Comment</label>

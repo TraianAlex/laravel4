@@ -13,7 +13,7 @@ class Post extends Model
 	 */
     public function comments()
     {
-        return $this->hasMany('App\Comment');
+        return $this->hasMany(Comment::class);
     }
     /**
      * Polymorphic Relations
@@ -56,5 +56,15 @@ class Post extends Model
     public function getTagListAttribute()
     {
         return $this->tags->lists('id')->all();//->all() resolved the problem in form
+    }
+
+    public function path()
+    {
+        return url('/posts', $this->id);
+    }
+
+    public function addComment(Comment $comment)
+    {
+        return $this->comments()->save($comment);
     }
 }

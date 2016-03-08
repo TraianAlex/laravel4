@@ -14,7 +14,7 @@ class UserController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['index', 'show']]);
+        $this->middleware('auth', ['except' => ['index']]);
     }
     /**
      * Display a listing of the resource.
@@ -86,7 +86,7 @@ class UserController extends Controller
         //$user->country()->associate($request->country_id);//2//update a belongs to
         //$user->save();//2
 
-        if($user->phone->user_id){
+        if($user->phone){//->user_id
             Phone::where('user_id', $user->id)->update(['name' => $request->phone]);
         }else{
             Phone::create(['user_id' => $user->id, 'name' => $request->phone]);//1

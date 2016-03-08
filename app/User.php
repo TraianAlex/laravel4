@@ -43,7 +43,7 @@ class User extends Model implements AuthenticatableContract,
      */
     public function phone()
     {
-        return $this->hasOne('App\Phone');
+        return $this->hasOne(Phone::class);
     }
     /**
      * many to many
@@ -66,14 +66,15 @@ class User extends Model implements AuthenticatableContract,
 
     public function posts()
     {
-        return $this->hasMany('App\Post');
+        return $this->hasMany(Post::class);
     }
     /**
      * find comments by user
      */
     public function comments()
     {
-        return $this->hasManyThrough('App\Comment', 'App\Post');
+        //return $this->hasManyThrough(Comment::class, Post::class);
+        return $this->hasMany(Comment::class);
     }
 
     /**

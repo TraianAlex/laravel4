@@ -5,7 +5,7 @@
 	
 	<h4>Posts</h4>
 	@foreach ($post_all as $post)
-		<b><a href="{{url('/posts', $post->id)}}">{{$post->title}}</a></b> by {{$post->user->name}}<br>
+		<b><a href="{{ $post->path() }}">{{$post->title}}</a></b> by {{$post->user->name}}<br>
 		{{$post->body}}<br>
 		<a href="{{url('/posts', $post->id)}}">comment</a><hr>
 	@endforeach

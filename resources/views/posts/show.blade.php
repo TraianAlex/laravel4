@@ -19,7 +19,9 @@
             </div>
         @endcan
 
-         <a href="{{ url('likes/like', ['postId' => $post->id]) }}">Like</a>
+        @if(auth()->user())
+            <a href="{{ url('likes/like', ['postId' => $post->id]) }}">Like</a>
+        @endif
         {{ $post->likes->count() }} {{ str_plural('like', $post->likes->count()) }}
         
         @foreach ($comments as $comment)
@@ -63,8 +65,10 @@
 	   <b>Comments by: {{$post->user->name}}</b>{{$post->user->comments}}
     </div>
     <br>
-    <div class="row">
-        @include('comments.create')
-    </div>
+    @if(auth()->user())
+        <div class="row">
+            @include('comments.create')
+        </div>
+    @endif
 </div>
 @endsection
