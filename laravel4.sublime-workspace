@@ -80,10 +80,34 @@
 			}
 		},
 		{
-			"file": "app/Http/Controllers/WelcomeController.php",
+			"file": "/Users/victor/Dropbox/setup/laravel",
 			"settings":
 			{
-				"buffer_size": 348,
+				"buffer_size": 11924,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/CommentController.php",
+			"settings":
+			{
+				"buffer_size": 3165,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Post.php",
+			"settings":
+			{
+				"buffer_size": 1880,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/PostController.php",
+			"settings":
+			{
+				"buffer_size": 7377,
 				"line_ending": "Unix"
 			}
 		}
@@ -116,39 +140,40 @@
 	},
 	"file_history":
 	[
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Providers/RouteServiceProvider.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/routes.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/CommentController.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Comment.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/User.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/users/show.blade.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/UserController.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/comments/edit.blade.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Post.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Phone.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Requests/CreateCommentRequest.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/comments/create.blade.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/index.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/create.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Comment.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/PostController.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/show.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/LikeController.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/index.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/UserController.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/CommentController.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/gulpfile.js",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Policies/CommentPolicy.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/routes.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/WelcomeController.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Providers/RouteServiceProvider.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/User.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/users/show.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/comments/edit.blade.php",
+		"/Users/victor/Dropbox/www/laravel/laravel4/app/Post.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/RoleController.php",
 		"/Users/victor/Dropbox/setup/laravel",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/WelcomeController.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Providers/AuthServiceProvider.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Policies/UserPolicy.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Policies/PostPolicy.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Policies/CommentPolicy.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/LikeController.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/tags.blade.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Controllers/TagController.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/create.blade.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/posts/edit.blade.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/users/edit.blade.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Requests/CreateCommentRequest.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/helpers.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/database/migrations/2016_01_21_225345_add_user_id_to_posts_table.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Requests/UpdatePostRequest.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Http/Requests/UpdateCommentRequest.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/app/Country.php",
-		"/Users/victor/Dropbox/www/laravel/laravel4/app/Phone.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/users/index.blade.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/resources/views/layouts/navigation.blade.php",
 		"/Users/victor/Dropbox/www/laravel/laravel4/composer.json",
@@ -242,8 +267,7 @@
 		"/home/victor92/Public/wordpress/wp-content/themes/twentytwelve/page-templates/full-width.php",
 		"/home/victor92/Public/wordpress/wp-content/themes/twentytwelve/404.php",
 		"/home/victor92/Public/wordpress/wp-content/themes/twentytwelve/archive.php",
-		"/home/victor92/Public/wordpress/wp-content/themes/twentytwelve/author.php",
-		"/home/victor92/Public/wordpress/wp-content/themes/twentytwelve/category.php"
+		"/home/victor92/Public/wordpress/wp-content/themes/twentytwelve/author.php"
 	],
 	"find":
 	{
@@ -320,18 +344,46 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/Http/Controllers/WelcomeController.php",
+					"file": "/Users/victor/Dropbox/setup/laravel",
 					"settings":
 					{
-						"buffer_size": 348,
+						"buffer_size": 11924,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								346,
-								346
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/Http/Controllers/CommentController.php",
+					"settings":
+					{
+						"buffer_size": 3165,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1433,
+								1433
 							]
 						],
 						"settings":
@@ -342,7 +394,64 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1098.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/Post.php",
+					"settings":
+					{
+						"buffer_size": 1880,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1596,
+								1596
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 136.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/Http/Controllers/PostController.php",
+					"settings":
+					{
+						"buffer_size": 7377,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1479.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -409,7 +518,7 @@
 		[
 			[
 				"",
-				"/Users/victor/Dropbox/www/laravel/laravelx1/laravelx1.sublime-project"
+				"/Users/victor/Dropbox/www/laravel/laravel3/laravel3.sublime-project"
 			],
 			[
 				"la",

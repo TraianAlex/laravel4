@@ -24,8 +24,8 @@ class CreateCommentRequest extends Request
     public function rules()
     {
         return [
-            'post_id' => 'required|integer',
-            'comment' => 'required|max:250'
+            //'post_id' => 'required|integer',
+            'comment' => 'required|min:2|max:250'
         ];
     }
 }

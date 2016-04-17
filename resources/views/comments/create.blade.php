@@ -15,15 +15,13 @@
 						</div>
 					@endif
 
-					<form class="form-horizontal" role="form" method="POST" action="{{ url('/comments') }}">
-						<input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-						<input type="hidden" name="post_id" value="{{$post->id}}">
+					<form class="form-horizontal" role="form" method="POST" action="{{ url('posts/'.$post->id.'/comments') }}">
+						{{ csrf_field() }}
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">Comment</label>
 							<div class="col-md-6">
-								<textarea type="text" class="form-control" name="comment"></textarea>
+								<textarea type="text" class="form-control" name="comment">{{ old('comment') }}</textarea>
 							</div>
 						</div>
 

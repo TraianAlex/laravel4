@@ -63,8 +63,14 @@ class Post extends Model
         return url('/posts', $this->id);
     }
 
-    public function addComment(Comment $comment)
+    // public function addComment(Comment $comment)
+    // {
+    //     return $this->comments()->save($comment);
+    // }
+
+    public function addComment(Comment $comment, $userId)
     {
+        $comment->user_id = $userId;
         return $this->comments()->save($comment);
     }
 }

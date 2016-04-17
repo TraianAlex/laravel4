@@ -24,7 +24,7 @@
         @endif
         {{ $post->likes->count() }} {{ str_plural('like', $post->likes->count()) }}
         
-        @foreach ($comments as $comment)
+        @foreach ($post->comments as $comment)
         	@if($comment->user)
                 <div class="col-md-4">
         		  {{$comment->id}}. <b>{{$comment->user->name}}:</b> {{$comment->created_at}}

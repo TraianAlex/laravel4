@@ -24,4 +24,5 @@ class CommentPolicy
     {
         return $user->id == $comment->user_id;
     }
+
 }

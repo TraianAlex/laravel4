@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-    protected $fillable = ['comment', 'user_id'];
+    protected $fillable = ['comment'];//last solution for add com do not have to add user_id here
 	/**
 	 * one to many reverse
 	 */

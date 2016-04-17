@@ -150,12 +150,13 @@ class PostController extends Controller
     {
         //auth()->loginUsingId(34);//33/34
         //$post = Post::findOrFail($id);
-        $comments = $post->comments()->get();
+        //$comments = $post->comments()->get();//replaced with eager loading
+        $post->load('comments.user');//eager loading
 
         //$user = User::find($post->user_id);//find comments by user
         //$post_by_user = $user->comments;//replaced with post->user->comments
 
-        return view('posts.show', compact('post', 'comments'));
+        return view('posts.show', compact('post'));
     }
 
     /**

@@ -39,9 +39,9 @@ class CommentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateCommentRequest $request)
+    public function store(CreateCommentRequest $request, Post $post)
     {
-        $post = Post::find($request->post_id);
+        //$post = Post::find($request->post_id);
         ////$comment = new Comment;
         ////$comment->comment = $request->comment;
         ////$comment->user_id = auth()->user()->id;
@@ -49,17 +49,22 @@ class CommentController extends Controller
         //$comment = new Comment(['comment' => $request->comment, 'user_id' => auth()->user()->id]);
 
         //$post->comments()->save($comment);
+
         // $post->comments()->save(
         //     new Comment(['comment' => $request->comment, 'user_id' => auth()->user()->id]);
         // );
 
-        $post->addComment(
-            new Comment(['comment' => $request->comment, 'user_id' => auth()->user()->id])
-        );
+        //$post->comments()->create(['comment' => $request->comment,
+        //                            user_id' => auth()->user()->id]);
+
+        // $post->addComment(
+        //     new Comment(['comment' => $request->comment, 'user_id' => auth()->user()->id])
+        // );
+
+        $comment = new Comment($request->all());
         
-        //$comment = $post->comments()->create(['comment' => $request->comment,
-        //                                      'user_id' => auth()->user()->id]);
-        //return redirect("posts/$request->post_id");
+        $post->addComment($comment, auth()->user()->id);
+
         return back();
     }
 
